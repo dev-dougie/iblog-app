@@ -1,0 +1,43 @@
+<style>
+    body {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    main {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    hr {
+        height: 10px;
+        border-radius: 6px;
+        background-color: #536DFE;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .card {
+        border-top: 1px solid gainsboro;
+        border-bottom: 1px solid gainsboro;
+        margin: 10px auto;
+    }
+    
+</style>
+
+<main>
+    <h2>Categorias de postagem 📊</h2>
+    <hr>
+    {{#each categories}}
+    <div class="category">
+        <div class="card">
+            <p><strong>Nome:</strong> {{name}} </p>
+            <p><strong>Slug:</strong> {{slug}}</p>
+        </div>
+    </div>
+    {{else}}
+    <p>Nenhuma categoria registrada :(</p>
+    <p><a href="/usuario/registro">Cadastre-se</a> e registre a primeira categoria</p>
+    {{/each}}
+</main>

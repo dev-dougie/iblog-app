@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+h1{
+    font-size: 65px;
+}
+
+span{
+    font-size: 26px;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+main{
+    margin: 5px auto;
+    max-width: 90%;
+    animation: up 1s;
+}
+
+img{
+    width: 400px;
+    height: 250px;
+    grid-column: span 2;
+}
+
+.slogan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto
+}
+
+hr{
+    height: 10px;
+    border-radius: 6px;
+    background-color: #536DFE;
+    border: none;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.post{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid gainsboro;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 10px auto;
+}
+
+.post:hover{
+    animation: bounce 0.6s;
+    box-shadow: 0px 3px 10px rgba(88, 88, 88, 0.1), 0px 16px 31px rgba(88, 88, 88, 0.1);
+    border: none;
+}
+
+.content{
+    padding: 50px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.top-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+h4{
+    font-size: 30px;
+}
+
+.posts > footer{
+    border-top: 1px solid black;
+}
+
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}

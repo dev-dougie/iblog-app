@@ -1,0 +1,27 @@
+<main class="home">
+    <div class="slogan">
+        <h1>iBlog</h1>
+        <span>Seu melhor blog de tecnologia e programação.</span>
+        <img src="https://leads2b.com/blog/wp-content/uploads/2020/01/undraw_data_trends_b0wg-01.png"
+            alt="iBlog image"  draggable="false"/>
+    </div>
+    <hr>
+    <h3>Postagens recentes: 😃</h3>
+    {{#each posts}}
+    <div class="panel">
+         <article class="post">
+            <div class="top-header">
+                <h4>{{title}}</h4>
+                {{slug}} || {{description}}
+            </div>
+            <div class="content">
+                <p>{{content}}</p>
+            </div>
+            <footer><strong>📅</strong>: {{date}}</footer>
+         </article>
+    </div>
+    {{else}}
+        <p>Não existem postagens a serem exibidas :(</p>
+        <p><a href = "/usuario/registro">Cadastre-se</a> e seja o primeiro a postar</p>
+    {{/each}}
+</main>

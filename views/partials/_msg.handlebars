@@ -1,0 +1,38 @@
+<style>
+       .alert-danger{
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        background: rgb(235, 129, 129);
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .alert-success {
+        margin: 10px auto;
+        width: 90%;
+        background: rgb(141, 235, 129);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 6px;
+    }
+</style>
+
+
+{{#if success_msg}}
+    <div class="alert-success">
+        {{success_msg}}
+    </div>
+{{/if}}
+
+{{#if error_msg}}
+    <div class="alert-danger">
+        {{error_msg}}
+    </div>
+{{/if}}

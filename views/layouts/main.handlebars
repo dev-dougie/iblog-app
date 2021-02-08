@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/{{style}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>iBlog</title>
+</head>
+
+<body>
+    {{>_navbar}}
+    {{#if error}}
+    <div class="alert-danger">{{error}}</div>
+    {{else}}
+    {{/if}}
+    {{> _msg}}
+    {{{body}}}
+
+
+    <script src="../../public/js/{{script}}"></script>
+</body>
+
+</html>

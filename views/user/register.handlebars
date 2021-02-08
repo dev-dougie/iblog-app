@@ -1,0 +1,136 @@
+<style>
+    body {
+        font-family: 'Nunito', sans-serif;
+        min-height: 90vh;
+    }
+
+    main {
+        max-width: 90%;
+        margin: 3% auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card-body{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 90%;
+        border-radius: 6px;
+    }
+
+    .image-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url('https://images.unsplash.com/photo-1536412597336-ade7b523ecfc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80') no-repeat center center;
+        height: 500px;
+        width: 500px;
+        border-radius: 6px;
+        padding: 20px;
+    }
+
+    .image-title h1{
+        color: white;
+        font-weight: 600;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        -webkit-user-drag: none;
+        font-size: 70px;
+    }
+    
+    form{
+        padding: 20px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .input-field{
+        padding: 15px;
+        width: 90%;
+        margin-right: 15px;
+    }
+
+    label{
+        font-size: 18px;
+    }
+
+    input{
+        border: 1px solid gainsboro;
+        padding: 10px;
+        width: 100%;
+        font-size: 18px;
+        border-radius: 6px;
+    }
+
+    button  {
+        color: white;
+        padding: 10px;
+        min-width: 100%;
+        border: none;
+        background-color: #536DFE;
+        cursor: pointer;
+        font-size: 15px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+
+     @media(max-width: 500px) {
+         main{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             flex-direction: column;
+         }
+
+        .image-title {
+            display: none;
+        }
+
+        form{
+            max-width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            box-shadow: 0px 3px 10px rgba(88, 88, 88, 0.1), 0px 16px 31px rgba(88, 88, 88, 0.1);;
+        }
+    }
+</style>
+
+{{#each errors}}
+    <div class="alert-danger">{{text}}</div>
+{{/each}}
+
+<main>
+    <div class="card-body">
+        <div class="image-title">
+            <h1>FAÇA PARTE</h1>
+        </div>
+        <form action="" method="POST">
+            <div class="input-field"> 
+                <label for="name">Nome: *</label>
+                <input type="text" name="name" id="name" placeholder="Douglas Santos" >
+            </div>
+            <div class="input-field"> 
+                <label for="email">E-mail: *</label>
+                <input type="text" name="email" id="email" placeholder="contato@contato.com" >
+            </div>
+            <div class="input-field">
+                <label for="password">Senha: *</label>
+                <input type="password" name="password" id="password" placeholder="1234" reuired>
+            </div>
+            <div class="input-field"> 
+                <label for="password2">Senha: *</label>
+                <input type="password" name="password2" id="password2" placeholder="Confirme sua senha" >
+            </div>
+            <div class="input-field">
+                  <button type="submit" class="create">Criar conta</button>
+            </div>
+        </form>
+    </div>
+</main>

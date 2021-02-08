@@ -1,0 +1,89 @@
+<style>
+    body {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    main {
+        margin: 10px auto;
+        max-width: 90%;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid gainsboro;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .input-field {
+        width: 90%;
+    }
+
+    input {
+        border: 1px solid gainsboro;
+        border-radius: 6px;
+        font-size: 15px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .button-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    button {
+        margin: 5%;
+        padding: 10px;
+        width: 250px;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 15px;
+        font-weight: 600    ;
+    }
+
+    button[type=submit] {
+        background: rgb(62, 238, 39);
+    }
+
+    button[type=reset] {
+        background: rgb(246, 53, 53);
+    }
+</style>
+
+{{#each errors}}
+<div class="alert-danger">{{text}}</div>
+{{/each}}
+
+<main>
+    <h3>Adicionar categoria</h3>
+    <div class="form-newCategory">
+        <form action="/admin/categorias/new" method="POST">
+            <div class="input-field">
+                <label for="name">Nome:*</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="input-field">
+                <label for="slug">Slug:*</label>
+                <input type="text" name="slug" id="slug">
+            </div>
+            <div class="button-group">
+                <button type="reset">Cancelar</button>
+                <button type="submit">Adicionar</button>
+            </div>
+        </form>
+    </div>
+</main>

@@ -1,0 +1,41 @@
+<style>
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: none;
+        list-style: none;
+        margin: 10px auto;
+        max-width: 90%;
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0px 3px 10px rgba(88, 88, 88, 0.1), 0px 16px 31px rgba(88, 88, 88, 0.1);
+        animation: up 0.4s;
+    }
+
+    li a {
+        text-decoration: none;
+        color: #536DFE;
+        font-weight: 600;
+        padding: 5px;
+    }
+
+    li a:hover {
+        background-color: #536dfe;
+        color: white;
+        transition: 0.4s;
+        border-radius: 6px;
+    }
+</style>
+<nav class="navbar">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/categorias">Categorias</a></li>
+        {{#if user}}
+        <li><a href="/usuario/logout">Sair</a></li>
+        {{else}}
+        <li><a href="/usuario/registro">Registro</a></li>
+        <li><a href="/usuario/login">Login</a></li>
+        {{/if}}
+    </ul>
+</nav>

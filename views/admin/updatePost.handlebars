@@ -1,0 +1,64 @@
+<style>
+    body {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    main {
+        margin: 10px auto;
+        max-width: 90%;
+    }
+
+    h3{
+        font-size: 25px;
+    }
+
+    label{
+         font-size: 15px;
+    }
+
+    input{
+        max-width: 100%;
+    }
+
+</style>
+
+{{#each errors}}
+    <div class="alert-danger">{{text}}</div>
+{{/each}}
+
+<main>
+    <h3>Atualizar postagem</h3>
+    <div class="form-newPost">
+        <form action="/admin/postagens/update" method="POST">
+        <input type="hidden" name  = "id" value = "{{post._id}}">
+           <div class="input-field">
+               <label for="title">Título:</label>
+               <input type="text" value = "{{post.title}}" name = "title" id = 'title'>
+           </div>
+           <div class="input-field">
+               <label for="slug">Slug:</label>
+               <input type="text" value = "{{post.slug}}" name = "slug" id = 'slug'>
+           </div>
+           <div class="input-field">
+               <label for="category">Categoria:</label>
+               <select name="category" value = "{{post.category}}"id="category">
+                   {{#each categories}}
+                        <option value="{{_id}}">{{name}}</option>
+                    {{else}}
+                        <option value="0">Não há categoria cadastrada</option>
+                   {{/each}}
+               </select>
+           </div>
+           <div class="input-field">
+               <label for="description">Descrição:*</label>
+               <input type="text" value = {{post.description}}name = "description" id = 'description'>
+           </div>
+           <div class="input-field">
+               <label for="content">Conteúdo:*</label>
+               <textarea name="content" id="content" placeholder="Conteúdo aqui">{{post.content}}</textarea>
+           </div>
+           <button type="reset">Cancelar</button>
+            <button type = "submit">Adicionar</button>
+        </form>
+    </div>
+</main>

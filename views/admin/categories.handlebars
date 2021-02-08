@@ -1,0 +1,88 @@
+<style>
+    body {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    main {
+        margin: 10px auto;
+        max-width: 90%;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    a.add {
+        text-decoration: none;
+        background-color: #536DFE;
+        color: white;
+        padding: 6px;
+        border-radius: 6px;
+    }
+
+    .categories {
+        border: 1px solid rgba(0, 0, 0, 0.075);
+        padding: 10px;
+        border-radius: 6px;
+        margin: 12px auto;
+        transition: all 0.3s;
+    }
+
+     .categories:hover{
+         box-shadow: 0px 3px 10px rgba(88, 88, 88, 0.1), 0px 16px 31px rgba(88, 88, 88, 0.1);
+     }
+
+    p {
+        font-size: 16px;
+    }
+
+    .update{
+        font-size: 25px;
+        text-decoration: none;
+        color: rgb(0, 153, 255);
+    }
+
+    .delete{
+        font-size: 25px;
+        text-decoration: none;
+        color: rgb(245, 88, 88);
+        background: none;
+        border: none;
+        display: inline;
+        cursor: pointer;
+    }
+
+    .button-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+</style>
+
+
+<main>
+    <header>
+        <h2>Lista de Categorias</h2>
+        <a href="/admin/categorias/add" class="add">Adicionar categoria <i class="fas fa-plus"></i> </a>
+    </header>
+    {{#each categories}}
+    <div class="categories">
+        <p><strong>Nome: </strong>{{name}}</p>
+        <p><strong>Slug: </strong>{{slug}}</p>
+        <p><strong>Criado em: </strong>{{date}}</p>
+        <div class="button-group">
+        <form action="/admin/categorias/delete" method="POST">
+            <input type="hidden" name="id" value = "{{_id}}">
+            <button type = 'submit' class = "delete"><i class="fas fa-trash-alt"></i></button>
+        </form>
+        <a href="/admin/categorias/update/{{_id}}" class="update"><i class="fas fa-edit"></i></a>   
+        </div>
+    </div>
+    {{else}}
+    <p>Nenhuma categoria encontrada.</p>
+    {{/each}}
+
+</main>
