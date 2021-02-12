@@ -52,9 +52,7 @@ server.use(session({
 
 server.get('/', (req, res) => {
     
-    res.render('index', {
-        style: 'index.css'})
-    /*Post.find()
+    Post.find()
         .populate('category')
         .sort({ date: 'desc' })
         .then(posts => {
@@ -66,7 +64,7 @@ server.get('/', (req, res) => {
         }).catch(err => {
             req.flash('error_msg', 'Erro interno.')
             res.redirect('/404')
-        })*/
+        })
 })
 
 

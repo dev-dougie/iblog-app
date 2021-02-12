@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const db = require('../config/db')
 
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost/blogapp', {
+mongoose.connect(ongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
