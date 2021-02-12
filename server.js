@@ -66,9 +66,6 @@ server.get('/', (req, res) => {
         })
 })
 
-server.get('/404', (req, res) => {
-    res.send('<h1>404 not found </h1>')
-})
 
 server.get('/categorias', (req, res) => {
     Category.find().then(categories => {
