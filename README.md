@@ -2,20 +2,20 @@
 ![Captura de Tela (12)](https://user-images.githubusercontent.com/61589484/107809351-b2847f00-6d49-11eb-836b-b1456750a334.png)
 
 
-<h1>Sobre</h1>
+<h1>📋 - Sobre</h1>
 
 
 <p> O iBlog é um mini-blog com foco em tecnologia e programação. Nele os usuários podem postar conteúdos relevantes para a comunidade dev e afins </p>
 
 
-<h1>Tecnoligias utilizadas </h1>
+<h1>⚙️ - Tecnoligias utilizadas </h1>
 <ul>
 <li>Handlebars</li>
 <li>NodeJS</li>
 <li>MongoDB</li>
 </ul>
 
-<h1>Como executar</h1>
+<h1>📥 - Como executar</h1>
 
 <ol>
 <li>Faça um clone deste repositório</li>
